@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', function() {
 
-    // Tabs
     
 	let tabs = document.querySelectorAll('.tabheader__item'),
 		tabsContent = document.querySelectorAll('.tabcontent'),
@@ -39,7 +38,6 @@ window.addEventListener('DOMContentLoaded', function() {
 		}
     });
     
-    // Timer
 
     const deadline = '2021-10-11';
 
@@ -94,7 +92,6 @@ window.addEventListener('DOMContentLoaded', function() {
 
     setClock('.timer', deadline);
 
-    // Modal
 
     const modalTrigger = document.querySelectorAll('[data-modal]'),
         modal = document.querySelector('.modal');
@@ -129,8 +126,7 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 
     const modalTimerId = setTimeout(openModal, 300000);
-    // Изменил значение, чтобы не отвлекало
-
+   
     function showModalByScroll() {
         if (window.pageYOffset + document.documentElement.clientHeight >= document.documentElement.scrollHeight) {
             openModal();
@@ -139,7 +135,6 @@ window.addEventListener('DOMContentLoaded', function() {
     }
     window.addEventListener('scroll', showModalByScroll);
 
-    // Используем классы для создание карточек меню
 
     class MenuCard {
         constructor(src, alt, title, descr, price, parentSelector, ...classes) {
@@ -200,7 +195,6 @@ window.addEventListener('DOMContentLoaded', function() {
         });
 
         
-    // Forms
 
     const forms = document.querySelectorAll('form');
     const message = {
